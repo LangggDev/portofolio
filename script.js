@@ -77,5 +77,5 @@ form.addEventListener('submit', e => {
         `Halo Erlangga, saya ${data.get('nama')}.\n` +
         `Keperluan: ${data.get('jenis')}\n\n` +
         data.get('pesan');
-    window.open('https://wa.me/6282138152422?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    window.open('https://wa.me/6287841413309?text=' + encodeURIComponent(text), '_blank', 'noopener');
 });
