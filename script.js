@@ -68,6 +68,12 @@ document.querySelectorAll('.project-shot').forEach(shot => {
     });
 });
 
+// Tombol "tanya" di tiap jasa langsung bawa pesan WhatsApp yang sudah terisi
+document.querySelectorAll('[data-wa]').forEach(a => {
+    const text = `Halo KangDev, saya mau konsultasi soal ${a.dataset.wa}.`;
+    a.href = 'https://wa.me/6287841413309?text=' + encodeURIComponent(text);
+});
+
 // Form kontak -> buka WhatsApp dengan pesan yang sudah terisi
 const form = document.getElementById('contact-form');
 form.addEventListener('submit', e => {

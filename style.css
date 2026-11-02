@@ -605,46 +605,196 @@ h1, h2, h3, h4 {
     color: var(--ink-soft);
 }
 
-/* ---------- services ---------- */
+/* ---------- jasa ---------- */
 
-.services {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border-left: 1px solid var(--line);
-}
-
-.service {
-    padding: 4px 36px 10px;
-    border-right: 1px solid var(--line);
-}
-
-.service h3 {
-    font: 400 34px/1.1 var(--serif);
-    margin-bottom: 18px;
-}
-
-.service h3 .mono {
+.kangdev {
     color: var(--red);
-    vertical-align: middle;
-    margin-right: 6px;
 }
 
-.service ul {
+.jasa-intro {
+    max-width: 560px;
+    margin: -24px 0 40px;
+    color: var(--ink-soft);
+}
+
+/* catatan tempel */
+.notes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 90px;
+}
+
+.sticky {
+    --bg: #f7e48a;
+    background: var(--bg);
+    padding: 20px 18px 18px;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    rotate: var(--r, 0deg);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .08), 0 12px 18px -14px rgba(40, 30, 10, .5);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1), rotate .3s ease;
+}
+
+.sticky--pink { --bg: #f6c9c0; }
+.sticky--blue { --bg: #c9dcea; }
+.sticky--green { --bg: #cfe2b9; }
+
+.sticky:hover {
+    rotate: 0deg;
+    animation: wiggle .5s ease;
+}
+
+@keyframes wiggle {
+    25% { rotate: -2deg; }
+    60% { rotate: 1.5deg; }
+}
+
+.sticky p {
+    margin: 0;
+    font: 400 22px/1.2 var(--serif);
+}
+
+.sticky .hand {
+    margin-top: 16px;
+    font-size: 23px;
+}
+
+/* daftar jasa */
+.jasa {
     list-style: none;
     margin: 0;
     padding: 0;
+    border-top: 1px solid var(--ink);
 }
 
-.service li {
-    padding: 12px 0;
-    border-bottom: 1px dashed var(--line);
-    transition: padding-left .25s ease, color .25s;
+.jasa li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70px 1fr 1.3fr 90px;
+    gap: 28px;
+    align-items: baseline;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+    isolation: isolate;
 }
 
-.service li:hover {
-    padding-left: 10px;
+/* blok merah yang "menyapu" saat hover */
+.jasa li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--ink);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .4s cubic-bezier(.2, .7, .2, 1);
+}
+
+.jasa li:hover::before {
+    transform: scaleY(1);
+}
+
+.jasa li:hover {
+    color: var(--paper);
+}
+
+.jasa li > * {
+    transition: color .3s ease, transform .3s ease;
+}
+
+.jasa li:hover .jasa-num {
+    transform: translateX(14px);
+}
+
+.jasa-num {
     color: var(--red);
+}
+
+.jasa h3 {
+    font: 400 32px/1.05 var(--serif);
+}
+
+.jasa p {
+    margin: 0;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+}
+
+.jasa li:hover p {
+    color: rgba(242, 237, 227, .75);
+}
+
+.jasa-link {
+    justify-self: end;
+    text-decoration: none;
+    color: var(--red);
+    white-space: nowrap;
+}
+
+.jasa li:hover .jasa-link {
+    color: #ff6b5e;
+    transform: translate(-6px, 0);
+}
+
+/* kotak ajakan + stempel */
+.cta-box {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-top: 70px;
+    padding: 30px 34px;
+    border: 1.5px dashed var(--ink);
+    flex-wrap: wrap;
+}
+
+.cta-box > div:nth-child(2) {
+    flex: 1;
+    min-width: 240px;
+}
+
+.cta-title {
+    margin: 0 0 6px;
+    font: 400 30px/1.15 var(--serif);
+}
+
+.cta-box .hand {
+    margin: 0;
+}
+
+.stamp {
+    display: grid;
+    place-items: center;
+    width: 132px;
+    height: 132px;
+    border: 3px double var(--red);
+    border-radius: 50%;
+    color: var(--red);
+    text-align: center;
+    rotate: -14deg;
+    flex-shrink: 0;
+}
+
+.stamp span {
+    font: 500 11px var(--mono);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    align-self: end;
+}
+
+.stamp strong {
+    font: italic 400 34px/1 var(--serif);
+    align-self: start;
+}
+
+.cta-box.in .stamp {
+    animation: stamp .55s cubic-bezier(.3, 1.5, .5, 1) .35s backwards;
+}
+
+@keyframes stamp {
+    from { opacity: 0; scale: 2.2; rotate: -30deg; }
 }
 
 /* ---------- about ---------- */
@@ -931,6 +1081,23 @@ h1, h2, h3, h4 {
         gap: 10px;
     }
 
+    .notes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .jasa li {
+        grid-template-columns: 60px 1fr 90px;
+    }
+
+    .jasa p {
+        grid-column: 2 / 4;
+    }
+
+    .jasa-link {
+        grid-row: 1;
+        grid-column: 3;
+    }
+
     .project-shot {
         cursor: pointer;
     }
@@ -972,14 +1139,24 @@ h1, h2, h3, h4 {
         display: none;
     }
 
-    .services {
-        grid-template-columns: 1fr;
-        border-left: 0;
+    .notes {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .service {
-        padding: 0 0 40px;
-        border-right: 0;
+    .jasa li {
+        grid-template-columns: 40px 1fr;
+        gap: 6px 14px;
+    }
+
+    .jasa p,
+    .jasa-link {
+        grid-row: auto;
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .cta-box {
+        padding: 24px 20px;
     }
 
     .section {
