@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erlangga · Web Developer & Data Entry</title>
+<meta name="description" content="Erlangga, freelance web developer dan data entry. Lulusan S1 Informatika Universitas Teknologi Yogyakarta.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <a href="#top" class="brand">Erlangga<span>.</span></a>
+  <nav class="nav" id="nav">
+    <a href="#kerja">Kerja</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+  <p class="clock mono"><span class="dot"></span>Purworejo, <span data-clock>--:--</span> WIB</p>
+  <button class="menu-btn" id="menu-btn" aria-label="Buka menu" aria-expanded="false">Menu</button>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="mono kicker load" style="--d:0">Freelance &mdash; Web Developer &amp; Data Entry</p>
+
+      <h1 class="hero-title">
+        <span class="line"><span class="load" style="--d:1">Halo, saya Erlangga.</span></span>
+        <span class="line"><span class="load" style="--d:2">Saya bikin <em class="mark">website
+          <svg class="scribble" viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 40 4, 90 15, 130 8 S 200 6, 217 11"/></svg>
+        </em></span></span>
+        <span class="line"><span class="load" style="--d:3">dan merapikan data</span></span>
+        <span class="line"><span class="load" style="--d:4">yang berantakan.</span></span>
+      </h1>
+
+      <p class="hero-sub load" style="--d:5">
+        Lulusan S1 Informatika Universitas Teknologi Yogyakarta. Sekarang kerja lepas:
+        bangun sistem web pakai Laravel, dan bantu klien ngurus spreadsheet yang sudah kebanyakan tab.
+      </p>
+
+      <div class="hero-cta load" style="--d:6">
+        <a href="#kerja" class="btn">Lihat hasil kerja</a>
+        <a href="https://wa.me/6287841413309" target="_blank" rel="noopener" class="link">Chat WhatsApp &nearr;</a>
+      </div>
+    </div>
+
+    <figure class="polaroid drop">
+      <span class="tape tape-a"></span>
+      <span class="tape tape-b"></span>
+      <img src="profil.png" alt="Foto Erlangga" width="1066" height="1600">
+      <figcaption class="hand">ini foto buat lamaran kerja,<br>aslinya lebih santai kok</figcaption>
+      <svg class="arrow" viewBox="0 0 80 60" aria-hidden="true"><path d="M74 6 C 60 30, 40 44, 10 46 M10 46 l10 -9 M10 46 l12 6"/></svg>
+    </figure>
+  </section>
+
+  <!-- TOOLS STRIP -->
+  <div class="strip" aria-label="Tools yang saya pakai">
+    <div class="strip-track">
+      <span>HTML</span><i>&#10033;</i><span>CSS</span><i>&#10033;</i><span>JavaScript</span><i>&#10033;</i><span>React</span><i>&#10033;</i><span>PHP</span><i>&#10033;</i><span>Laravel</span><i>&#10033;</i><span>MySQL</span><i>&#10033;</i><span>Express.js</span><i>&#10033;</i><span>PostgreSQL</span><i>&#10033;</i><span>Tailwind</span><i>&#10033;</i><span>Excel <small>SUM, IF, LOOKUP</small></span><i>&#10033;</i><span>Prompting</span><i>&#10033;</i>
+      <span aria-hidden="true">HTML</span><i>&#10033;</i><span aria-hidden="true">CSS</span><i>&#10033;</i><span aria-hidden="true">JavaScript</span><i>&#10033;</i><span aria-hidden="true">React</span><i>&#10033;</i><span aria-hidden="true">PHP</span><i>&#10033;</i><span aria-hidden="true">Laravel</span><i>&#10033;</i><span aria-hidden="true">MySQL</span><i>&#10033;</i><span aria-hidden="true">Express.js</span><i>&#10033;</i><span aria-hidden="true">PostgreSQL</span><i>&#10033;</i><span aria-hidden="true">Tailwind</span><i>&#10033;</i><span aria-hidden="true">Excel <small>SUM, IF, LOOKUP</small></span><i>&#10033;</i><span aria-hidden="true">Prompting</span><i>&#10033;</i>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section class="section wrap" id="kerja">
+    <div class="section-head reveal">
+      <span class="mono num">01</span>
+      <h2>Hasil kerja</h2>
+    </div>
+
+    <article class="project reveal">
+      <a href="https://cryptoanalis.vercel.app/" target="_blank" rel="noopener" class="project-shot">
+        <div class="browser">
+          <div class="browser-bar"><span></span><span></span><span></span><p class="mono">cryptoanalis.vercel.app</p></div>
+          <img src="assets/crypto.png" alt="Tampilan dashboard Crypto Analis" loading="lazy">
+        </div>
+        <span class="cursor-tag mono" aria-hidden="true">buka situs &nearr;</span>
+      </a>
+
+      <div class="project-info">
+        <p class="mono meta">Web App &middot; Express.js &middot; PostgreSQL</p>
+        <h3>Crypto Analis</h3>
+        <p>
+          Dashboard harga kripto dalam Rupiah yang update secara live. Untuk tiap koin, sistem membaca
+          indikator seperti EMA, MACD, RSI, dan Bollinger Band di empat timeframe, lalu menggabungkannya
+          jadi satu saran: beli, tahan, atau jual. Ada juga analisis order book, level support/resistance, dan watchlist.
+        </p>
+        <dl class="facts">
+          <div><dt class="mono">Peran</dt><dd>Desain, backend, frontend</dd></div>
+          <div><dt class="mono">Stack</dt><dd>Express.js, PostgreSQL, HTML, CSS, Tailwind</dd></div>
+          <div><dt class="mono">Timeframe</dt><dd>15m, 1H, 4H, 1D</dd></div>
+        </dl>
+        <a href="https://cryptoanalis.vercel.app/" target="_blank" rel="noopener" class="link">cryptoanalis.vercel.app &nearr;</a>
+        <p class="hand note">harganya live, jadi screenshot ini sudah basi</p>
+      </div>
+    </article>
+
+    <article class="project project--flip reveal">
+      <a href="https://analis-saham.vercel.app/" target="_blank" rel="noopener" class="project-shot">
+        <div class="browser">
+          <div class="browser-bar"><span></span><span></span><span></span><p class="mono">analis-saham.vercel.app</p></div>
+          <img src="assets/saham.png" alt="Tampilan dashboard StockPulse" loading="lazy">
+        </div>
+        <span class="cursor-tag mono" aria-hidden="true">buka situs &nearr;</span>
+      </a>
+
+      <div class="project-info">
+        <p class="mono meta">Web App &middot; Express.js &middot; PostgreSQL</p>
+        <h3>StockPulse</h3>
+        <p>
+          Alat bantu analisis saham IDX. Setiap emiten diberi skor gabungan dari sisi teknikal, fundamental,
+          dan sentimen, plus prediksi arah IHSG untuk hari berikutnya. Grafiknya bisa pakai TradingView
+          atau chart buatan sendiri, dan pembelian bisa dicatat langsung dari watchlist.
+        </p>
+        <dl class="facts">
+          <div><dt class="mono">Peran</dt><dd>Desain, backend, frontend</dd></div>
+          <div><dt class="mono">Stack</dt><dd>Express.js, PostgreSQL, HTML, CSS, Tailwind</dd></div>
+          <div><dt class="mono">Skor</dt><dd>Teknikal, fundamental, sentimen</dd></div>
+        </dl>
+        <a href="https://analis-saham.vercel.app/" target="_blank" rel="noopener" class="link">analis-saham.vercel.app &nearr;</a>
+        <p class="hand note">ada mode gelap &amp; terang juga</p>
+      </div>
+    </article>
+
+    <!--
+      Template untuk proyek berikutnya. Salin blok <article class="project reveal"> di atas,
+      lalu ganti gambar, judul, deskripsi, dan link-nya.
+    -->
+    <p class="more reveal">
+      Proyek lain sedang saya rapikan dulu sebelum dipajang di sini.
+      Mau lihat contoh lain? <a href="#kontak" class="link">Tanya langsung saja</a>.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section wrap" id="layanan">
+    <div class="section-head reveal">
+      <span class="mono num">02</span>
+      <h2>Yang bisa saya bantu</h2>
+    </div>
+
+    <div class="services">
+      <div class="service reveal">
+        <h3><span class="mono">a.</span> Website</h3>
+        <ul>
+          <li>Company profile &amp; landing page</li>
+          <li>Sistem informasi / dashboard berbasis Laravel</li>
+          <li>Halaman admin, login, dan manajemen data</li>
+          <li>Perbaikan atau update website yang sudah ada</li>
+        </ul>
+      </div>
+      <div class="service reveal" style="--rd:.12s">
+        <h3><span class="mono">b.</span> Data entry</h3>
+        <ul>
+          <li>Input data dari dokumen, form, atau hasil scan</li>
+          <li>Rekap dan merapikan spreadsheet</li>
+          <li>Rumus Excel untuk laporan (SUM, IF, LOOKUP)</li>
+          <li>Cek ulang data ganda dan yang salah ketik</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section wrap" id="tentang">
+    <div class="section-head reveal">
+      <span class="mono num">03</span>
+      <h2>Tentang</h2>
+    </div>
+
+    <div class="about">
+      <div class="about-text reveal">
+        <p class="lead">
+          Saya tidak terikat di satu kantor. Proyek datang dari klien yang berbeda-beda,
+          jadi saya terbiasa memahami kebutuhan dengan cepat lalu mengerjakannya sendiri sampai selesai.
+        </p>
+        <p>
+          Untuk website, saya peduli fitur jalan dengan benar dan gampang dipakai.
+          Untuk data, saya teliti: angka yang masuk harus sama dengan sumbernya. Dua pekerjaan ini
+          kelihatannya beda, tapi sama-sama soal kerapian.
+        </p>
+        <p class="traits">
+          <span class="circled">problem solver<svg viewBox="0 0 140 50" preserveAspectRatio="none" aria-hidden="true"><path d="M20 8 C 70 -2, 136 8, 134 26 C 132 46, 30 50, 8 34 C -4 22, 20 10, 60 7"/></svg></span>
+          teliti, cepat belajar, dan terbiasa kerja mandiri.
+        </p>
+      </div>
+
+      <ol class="timeline reveal" style="--rd:.12s">
+        <li>
+          <span class="mono when">Sekarang</span>
+          <div>
+            <h4>Freelance Web Developer &amp; Data Entry</h4>
+            <p>Mengerjakan website dan pengelolaan data untuk berbagai klien, sesuai kebutuhan masing-masing.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mono when">Lulus</span>
+          <div>
+            <h4>S1 Informatika</h4>
+            <p>Universitas Teknologi Yogyakarta. Belajar pemrograman, pengembangan web, dan pengolahan data.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="kontak">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="mono num">04</span>
+        <h2>Kontak</h2>
+      </div>
+
+      <p class="contact-big reveal">Punya proyek? <em>Ngobrol dulu aja.</em></p>
+
+      <div class="contact-grid">
+        <ul class="channels reveal">
+          <li><span class="mono">WhatsApp</span><a href="https://wa.me/6287841413309" target="_blank" rel="noopener" class="link">+62 878-4141-3309</a></li>
+          <li><span class="mono">Email</span><a href="mailto:erlangga.development@gmail.com" class="link">erlangga.development@gmail.com</a></li>
+          <!-- TODO: ganti dengan URL profil LinkedIn & GitHub yang asli -->
+          <li><span class="mono">LinkedIn</span><a href="https://linkedin.com" target="_blank" rel="noopener" class="link">/in/erlangga</a></li>
+          <li><span class="mono">GitHub</span><a href="https://github.com" target="_blank" rel="noopener" class="link">/erlangga</a></li>
+          <li class="hand reply">biasanya aku balas dalam 1x24 jam</li>
+        </ul>
+
+        <form class="form reveal" id="contact-form" style="--rd:.12s">
+          <p class="mono form-note">Pesan ini akan dibuka di WhatsApp.</p>
+          <label>
+            <span>Nama</span>
+            <input type="text" name="nama" required autocomplete="name">
+          </label>
+          <label>
+            <span>Butuh bantuan apa?</span>
+            <select name="jenis">
+              <option>Bikin website</option>
+              <option>Perbaikan website</option>
+              <option>Data entry / Excel</option>
+              <option>Lainnya</option>
+            </select>
+          </label>
+          <label>
+            <span>Ceritakan sedikit</span>
+            <textarea name="pesan" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-light">Kirim lewat WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>&copy; <span data-year>2026</span> Erlangga</p>
+    <p class="mono">Yogyakarta &middot; <span data-clock>--:--</span> WIB</p>
+    <a href="#top" class="link">Ke atas &uarr;</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
