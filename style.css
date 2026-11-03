@@ -21,6 +21,7 @@
 }
 
 html {
+    overflow-x: clip;
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
 }
@@ -31,7 +32,7 @@ body {
     color: var(--ink);
     font: 400 17px/1.6 var(--sans);
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /* sedikit tekstur kertas */
@@ -393,6 +394,13 @@ h1, h2, h3, h4 {
 }
 
 /* ---------- strip ---------- */
+
+/* pembungkus memotong ujung pita yang miring supaya halaman tidak melebar */
+.strip-wrap {
+    overflow: hidden;
+    padding: 24px 0;
+    margin: -24px 0;
+}
 
 .strip {
     background: var(--ink);
@@ -1142,6 +1150,20 @@ h1, h2, h3, h4 {
 
     .notes {
         grid-template-columns: 1fr 1fr;
+        gap: 18px 14px;
+    }
+
+    .sticky {
+        min-height: 150px;
+        padding: 22px 14px 14px;
+    }
+
+    .sticky p {
+        font-size: 19px;
+    }
+
+    .sticky .hand {
+        font-size: 20px;
     }
 
     .jasa li {
