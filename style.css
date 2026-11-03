@@ -626,21 +626,39 @@ h1, h2, h3, h4 {
 }
 
 .sticky {
-    --bg: #f7e48a;
-    background: var(--bg);
-    padding: 20px 18px 18px;
+    position: relative;
+    background: #fbf9f4;
+    padding: 26px 18px 18px;
     min-height: 170px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     rotate: var(--r, 0deg);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .08), 0 12px 18px -14px rgba(40, 30, 10, .5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 14px 22px -16px rgba(40, 30, 10, .5);
     transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1), rotate .3s ease;
 }
 
-.sticky--pink { --bg: #f6c9c0; }
-.sticky--blue { --bg: #c9dcea; }
-.sticky--green { --bg: #cfe2b9; }
+/* selotip di atas tiap catatan, sama seperti di foto */
+.sticky::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    width: 78px;
+    height: 22px;
+    margin-left: -39px;
+    background: rgba(222, 210, 170, .75);
+    rotate: calc(var(--r, 0deg) * -2);
+}
+
+.sticky--ink {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.sticky--ink .hand {
+    color: #ff6b5e;
+}
 
 .sticky:hover {
     rotate: 0deg;
@@ -673,7 +691,7 @@ h1, h2, h3, h4 {
 .jasa li {
     position: relative;
     display: grid;
-    grid-template-columns: 70px 1fr 1.3fr 90px;
+    grid-template-columns: 70px 1fr 1.3fr;
     gap: 28px;
     align-items: baseline;
     padding: 26px 0;
@@ -725,18 +743,6 @@ h1, h2, h3, h4 {
 
 .jasa li:hover p {
     color: rgba(242, 237, 227, .75);
-}
-
-.jasa-link {
-    justify-self: end;
-    text-decoration: none;
-    color: var(--red);
-    white-space: nowrap;
-}
-
-.jasa li:hover .jasa-link {
-    color: #ff6b5e;
-    transform: translate(-6px, 0);
 }
 
 /* kotak ajakan + stempel */
@@ -1086,16 +1092,11 @@ h1, h2, h3, h4 {
     }
 
     .jasa li {
-        grid-template-columns: 60px 1fr 90px;
+        grid-template-columns: 60px 1fr;
     }
 
     .jasa p {
-        grid-column: 2 / 4;
-    }
-
-    .jasa-link {
-        grid-row: 1;
-        grid-column: 3;
+        grid-column: 2;
     }
 
     .project-shot {
@@ -1148,11 +1149,8 @@ h1, h2, h3, h4 {
         gap: 6px 14px;
     }
 
-    .jasa p,
-    .jasa-link {
-        grid-row: auto;
+    .jasa p {
         grid-column: 2;
-        justify-self: start;
     }
 
     .cta-box {
